@@ -1,0 +1,9 @@
+<h1>Students record component</h1>
+<ag-grid-angular
+    class="ag-theme-alpine"
+    (gridReady)="onGridReady($event)"
+    [rowData]="apiResponse"
+    [columnDefs]="columnDefs"
+    style="height: 800px; width: 100%;"
+    >
+</ag-grid-angular>
