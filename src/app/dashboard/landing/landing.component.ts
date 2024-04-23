@@ -1,13 +1,9 @@
 import { Component } from '@angular/core';
-import { NgbHighlight } from "@ng-bootstrap/ng-bootstrap";
-import { NgClass } from '@angular/common';
-import { FormsModule, FormControl, FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormBuilder } from '@angular/forms';
 
 
 @Component({
   selector: 'students-details-landing',
-  standalone: true,
-  imports: [NgClass, NgbHighlight, FormsModule, ReactiveFormsModule],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss'
 })
