@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { LandingComponent } from './landing/landing.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
-import { NgbHighlight } from '@ng-bootstrap/ng-bootstrap';
+import { NgbHighlight, NgbDatepickerModule, NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { StudentRecordsComponent } from './student-records/student-records.component';
 import { AgGridModule } from 'ag-grid-angular';
@@ -41,7 +41,9 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule,
+    NgbDatepickerModule,
     AgGridModule,
+    NgbTypeaheadModule,
     NgbHighlight,
     FormsModule,
     ReactiveFormsModule,

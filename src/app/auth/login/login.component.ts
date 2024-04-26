@@ -2,21 +2,27 @@ import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { CommonModule } from '@angular/common';
 import { NavigationExtras, Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'students-details-login',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
+  loginFormModel: any = {
+    username: "",
+    password: ""
+  };
+
   constructor(
     public authService: AuthService,
     private router: Router
   ) {}
 
-  login() {
+  login(form: any) {
     this.authService.login().subscribe(
       () => {
         if (this.authService.isLoggedIn){
